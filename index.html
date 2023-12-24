@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/form_rl.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <!-- Registration -->
+  <div class="container">
+    <div class="form-box">
+      <form action="" name="Formfill" onsubmit="return validation()">
+        <h2>Registration</h2>
+        <p id="result"></p>
+        <div class="input-box">
+          <i class='bx bxs-user'></i>
+          <input type="text" name="Username" placeholder="Username">
+        </div>
+
+        <div class="input-box">
+          <i class='bx bxs-envelope'></i>
+          <input type="email" name="Email" placeholder="Email">
+        </div>
+
+        <div class="input-box">
+          <i class='bx bxs-lock-alt'></i>
+          <i class='bx bxs-lock-open-alt' ></i>
+          <input type="password" name="Password" placeholder="Password">
+        </div>
+
+        <div class="input-box">
+          <i class='bx bxs-lock-alt'></i>
+          <i class='bx bxs-lock-open-alt' ></i>
+          <input type="password" name="cPassword" placeholder="Confirm password">
+        </div>
+
+        <div class="button">
+          <input type="submit" class="btn" onclick="validation()" value="Registration">
+        </div>
+
+        <div class="group">
+          <span><a href="#">Forget-Password</a></span>
+          <span><a href="form_login.html">Login</a></span>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="JS/form_rl.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/form_rl.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <!-- Login -->
+  <div class="container">
+    <div class="form-box">
+      <form action="" name="Formfill" onsubmit="return validation()">
+        <h2>Log In</h2>
+        <p id="result"></p>
+
+        <div class="input-box">
+          <i class='bx bxs-user'></i>
+          <input type="text" name="Username" placeholder="Username">
+        </div>
+
+        <div class="input-box">
+          <i class='bx bxs-lock-alt'></i>
+          <input type="password" name="Password" placeholder="Password">
+        </div>
+
+        <div class="button">
+          <input type="submit" class="btn" onclick="validation()" value="Login">
+        </div>
+
+        <div class="group">
+          <span><a href="#">Forget-Password</a></span>
+          <span><a href="index.html">Registration</a></span>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <script>
+
+  let passwordField = document.querySelector('input[name="Password"]');
+  let passwordIcon = document.querySelector('.input-box i.bxs-lock-alt');
+
+  passwordIcon.addEventListener('click', function() {
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+    } else {
+      passwordField.type = "password";
+    }
+  });
+
+  function validation(){
+    if (document.Formfill.Username.value == ""){
+      document.getElementById("result").innerHTML = "Enter Username*";
+      return false;
+    }
+    else if (document.Formfill.Username.value.length < 6){
+      document.getElementById("result").innerHTML = "At least six letter*";
+      return false;
+    }
+    else if (document.Formfill.Password.value === ""){
+      document.getElementById("result").innerHTML = "Enter your Password*";
+      return false;
+    }
+    else if (document.Formfill.Password.value.length < 6){
+      document.getElementById("result").innerHTML = "Password must be at least 6 characters*";
+      return false;
+    }
+    return true;
+  }
+  </script>
+</body>
+</html>
