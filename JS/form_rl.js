@@ -54,5 +54,6 @@ function validation(){
     document.getElementById("result").innerHTML = "Password don't match*";
     return false;
   }
-  return true;
+  document.querySelector('.form-box').style.display = 'none';
+  return false;
 }
