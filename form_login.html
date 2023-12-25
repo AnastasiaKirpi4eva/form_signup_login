@@ -69,7 +69,8 @@
       document.getElementById("result").innerHTML = "Password must be at least 6 characters*";
       return false;
     }
-    return true;
+    document.querySelector('.form-box').style.display = 'none';
+    return false;
   }
   </script>
 </body>
